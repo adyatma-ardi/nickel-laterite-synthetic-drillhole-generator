@@ -10,7 +10,7 @@ An automated, industry-standard pipeline to generate synthetic drillhole databas
 
 ## 🚀 Key Features
 
-* **Topographic Sampling**: Extracts exact surface elevations (\(Z\)) directly from Digital Elevation Models (DEM) using `rasterio`.
+* **Topographic Sampling**: Extracts exact surface elevations (Z) directly from Digital Elevation Models (DEM) using `rasterio`.
 * **Synchronized Survey Depths**: Automatically aligns the downhole survey terminal depths with the maximum collar depth (`max_depth`) for 100% data consistency.
 * **Laterite Profile Simulation**: Models the classic vertical zonation of nickel laterite deposits based on elevation trends:
   * **LIM** (Limonite Zone - High Fe, low-to-moderate Ni, low MgO)
@@ -37,7 +37,8 @@ nickel-laterite-drillhole-generator/
 │   └── assay.csv              # Multi-element chemistry intervals
 │
 ├── generate_drillholes.py     # Core Python processing & simulation engine
-├── run_pipeline.sh            # Automated Bash execution wrapper
+├── run_pipeline.bat           # Automated Windows Batch execution wrapper (Recommended)
+├── run_pipeline.sh            # Automated Bash execution wrapper (Linux/macOS)
 └── requirements.txt           # Required Python libraries
 ```
 
@@ -81,11 +82,19 @@ Place your prepared input files inside the `./raw_data/` directory:
 
 ### Step 3: Execute the Generator Pipeline
 
+#### For Windows Users (Recommended)
+Double-click the **`run_pipeline.bat`** file from your File Explorer, or execute it via Command Prompt (CMD):
+```cmd
+run_pipeline.bat
+```
+
+#### For Linux / macOS Users
 Run the automation script from your terminal interface:
 ```bash
 bash run_pipeline.sh
 ```
-The workflow will automatically sample surface elevations from your DEM, run downhole geochemical profiles, and write standardized database files into `./output_database/`.
+
+The workflow will automatically validate folders, check and install missing library dependencies, sample surface elevations from your DEM, run downhole geochemical profiles, and write standardized database files into `./output_database/`.
 
 ---
 
