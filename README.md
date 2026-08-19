@@ -1,7 +1,5 @@
 # Automated Synthetic Nickel Laterite Drillhole Generator
 
-# Automated Synthetic Nickel Laterite Drillhole Generator
-
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GIS Integration](https://img.shields.io/badge/GIS-QGIS%20%2F%20Rasterio-green.svg)](https://qgis.org/)
